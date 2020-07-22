@@ -1,5 +1,5 @@
 import { CreateQuizUseCase } from '@/module/quiz/application/CreateQuizUseCase'
-import { createQuizUseCaseMother } from '../utils/mother/CreateQuizUseCaseMother'
+import { createQuizUseCaseMother } from '../domain/mother/CreateQuizUseCaseMother'
 
 test('CreateQuizUseCase exist', () => {
     expect(CreateQuizUseCase).toBeTruthy()
