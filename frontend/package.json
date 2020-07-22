@@ -7,7 +7,10 @@
         "build": "vue-cli-service build",
         "vue-lint": "vue-cli-service lint",
         "lint": "npm-run-all format vue-lint",
-        "format": "prettier --write ."
+        "format": "prettier --write .",
+        "vue-test": "vue-cli-service test:unit",
+        "test": "npm-run-all lint --parallel vue-test",
+        "test:watch": "npm-run-all lint vue-test"
     },
     "dependencies": {
         "core-js": "^3.6.5",
@@ -21,16 +24,20 @@
         "vuex": "^3.4.0"
     },
     "devDependencies": {
+        "@types/jest": "^26.0.5",
         "@typescript-eslint/eslint-plugin": "^2.33.0",
         "@typescript-eslint/parser": "^2.33.0",
         "@vue/cli-plugin-babel": "~4.4.0",
         "@vue/cli-plugin-eslint": "~4.4.0",
         "@vue/cli-plugin-router": "~4.4.0",
         "@vue/cli-plugin-typescript": "~4.4.0",
+        "@vue/cli-plugin-unit-jest": "^4.4.6",
         "@vue/cli-plugin-vuex": "~4.4.0",
         "@vue/cli-service": "~4.4.0",
         "@vue/eslint-config-standard": "^5.1.2",
         "@vue/eslint-config-typescript": "^5.0.2",
+        "@vue/test-utils": "^1.0.3",
+        "babel-jest": "^26.1.0",
         "eslint": "^6.7.2",
         "eslint-config-prettier": "^6.11.0",
         "eslint-plugin-import": "^2.20.2",
@@ -39,10 +46,13 @@
         "eslint-plugin-promise": "^4.2.1",
         "eslint-plugin-standard": "^4.0.0",
         "eslint-plugin-vue": "^6.2.2",
+        "jest": "^26.1.0",
         "node-sass": "^4.12.0",
         "prettier": "^2.0.5",
         "sass-loader": "^8.0.2",
+        "ts-jest": "^26.1.3",
         "typescript": "~3.9.3",
+        "vue-jest": "^3.0.6",
         "vue-template-compiler": "^2.6.11"
     }
 }
