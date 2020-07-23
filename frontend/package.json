@@ -8,15 +8,14 @@
         "vue-lint": "vue-cli-service lint",
         "lint": "npm-run-all format vue-lint",
         "format": "prettier --write .",
-        "vue-test": "vue-cli-service test:unit",
-        "test": "npm-run-all lint --parallel vue-test",
-        "test:watch": "npm-run-all lint vue-test"
+        "test:unit": "vue-cli-service test:unit",
+        "test:unit:watch": "vue-cli-service test:unit --watch",
+        "test": "npm-run-all lint --parallel test:unit",
+        "test:watch": "npm-run-all lint --parallel test:unit:watch"
     },
     "dependencies": {
         "core-js": "^3.6.5",
         "npm-run-all": "^4.1.5",
-        "pug": "^3.0.0",
-        "pug-plain-loader": "^1.0.0",
         "vue": "^2.6.11",
         "vue-class-component": "^7.2.3",
         "vue-property-decorator": "^8.4.2",
@@ -24,6 +23,8 @@
         "vuex": "^3.4.0"
     },
     "devDependencies": {
+        "pug": "^3.0.0",
+        "pug-plain-loader": "^1.0.0",
         "@types/jest": "^26.0.5",
         "@typescript-eslint/eslint-plugin": "^2.33.0",
         "@typescript-eslint/parser": "^2.33.0",
