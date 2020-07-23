@@ -4,6 +4,13 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { Component } from 'vue-property-decorator'
+import { CustomVue } from '../classes/CustomVue'
 
-export default class QuizQuestion extends Vue {}
+@Component
+export default class QuizQuestion extends CustomVue {
+    created() {
+        console.log('Hola', this.$router.routerHello())
+    }
+}
 </script>
